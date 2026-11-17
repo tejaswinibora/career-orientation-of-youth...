@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Career Orientation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Career Orientation</h1>
+    <p>Explore Your Skills | Discover Your Future</p>
+</header>
+
+<nav>
+    <a href="#" onclick="goHome()">Home</a>
+    <a href="#about" onclick="goHome()">About</a>
+</nav>
+
+<div class="progress">
+    <div id="progressBar"></div>
+</div>
+
+<main class="container">
+
+<!-- PAGE 1 HOME -->
+
+<section class="page active" id="page1">
+
+    <div class="hero">
+        <h1>Welcome Students!</h1>
+        <h2>Build Your Bright Future</h2>
+        <p>Discover your skills, interests and career opportunities.</p>
+        <button onclick="nextPage(2)">Get Started</button>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Career Guidance</h3>
+            <p>Find your right career path.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Skill Development</h3>
+            <p>Understand your strengths.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Future Planning</h3>
+            <p>Plan your professional future.</p>
+        </div>
+    </div>
+
+    <div id="about">
+        <h2>About Us</h2>
+        <p>Our website helps students understand their skills and select suitable career opportunities.</p>
+    </div>
+
+</section>
+
+
+<!-- PAGE 2 PERSONAL DETAILS -->
+
+<section class="page" id="page2">
+
+    <h2>Personal Information</h2>
+    <p class="subtitle">Step 1 - Personal Details</p>
+
+    <label>Full Name</label>
+    <input id="name" placeholder="Enter Full Name">
+
+    <label>Mobile Number</label>
+    <input id="mobile" type="tel" maxlength="10" placeholder="Enter Mobile Number">
+
+    <label>Email Address</label>
+    <input id="email" type="email" placeholder="Enter Email">
+
+    <label>Password</label>
+    <input id="password" type="password" placeholder="Create Password">
+
+    <label>Confirm Password</label>
+    <input id="confirmPassword" type="password" placeholder="Confirm Password">
+
+    <div class="buttons">
+        <button class="secondary" onclick="nextPage(1)">Previous</button>
+        <button onclick="savePersonal()">Next</button>
+    </div>
+
+</section>
+
+
+<!-- PAGE 3 EDUCATION -->
+
+<section class="page" id="page3">
+
+    <h2>Education Details</h2>
+    <p class="subtitle">Step 2 - Educational Background</p>
+
+    <label>Education</label>
+    <select id="education">
+        <option value="">Select Education</option>
+        <option>10th</option>
+        <option>12th Science</option>
+        <option>12th Commerce</option>
+        <option>12th Arts</option>
+        <option>Diploma</option>
+        <option>BCA</option>
+        <option>BBA</option>
+        <option>BSc</option>
+        <option>BA</option>
+        <option>BCom</option>
+        <option>Engineering</option>
+        <option>Other</option>
+    </select>
+
+    <label>College / School Name</label>
+    <input id="college" placeholder="Enter College Name">
+
+    <label>Course / Branch</label>
+    <input id="course" placeholder="Enter Course">
+
+    <label>Current Year</label>
+    <select id="year">
+        <option value="">Select Year</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+        <option>Completed</option>
+    </select>
+
+    <label>Percentage / CGPA</label>
+    <input id="percentage" placeholder="Enter Percentage / CGPA">
+
+    <div class="buttons">
+        <button class="secondary" onclick="nextPage(2)">Previous</button>
+        <button onclick="saveEducation()">Next</button>
+    </div>
+
+</section>
+
+
+<!-- PAGE 4 SKILLS -->
+
+<section class="page" id="page4">
+
+    <h2>Skills & Interests</h2>
+    <p class="subtitle">Step 3 - Your Skills</p>
+
+    <label>Technical Skills</label>
+    <textarea id="skills" placeholder="HTML, CSS, Java, Python"></textarea>
+
+    <label>Other Skills</label>
+    <textarea id="otherSkills" placeholder="Communication, Leadership"></textarea>
+
+    <label>Hobbies</label>
+    <input id="hobbies" placeholder="Enter Your Hobbies">
+
+    <label>Main Interests</label>
+    <select id="interest">
+        <option value="">Select Interest</option>
+        <option>Technology</option>
+        <option>Business</option>
+        <option>Science</option>
+        <option>Arts and Design</option>
+        <option>Government Services</option>
+        <option>Sports</option>
+        <option>Other</option>
+    </select>
+
+    <div class="buttons">
+        <button class="secondary" onclick="nextPage(3)">Previous</button>
+        <button onclick="saveSkills()">Next</button>
+    </div>
+
+</section>
+
+
+<!-- PAGE 5 CAREER -->
+
+<section class="page" id="page5">
+
+    <h2>Career Preferences</h2>
+    <p class="subtitle">Step 4 - Select Your Future Career</p>
+
+    <label>Career Interest</label>
+    <select id="career">
+        <option value="">Select Career</option>
+        <option>Software Developer</option>
+        <option>Web Developer</option>
+        <option>Data Analyst</option>
+        <option>Cyber Security Expert</option>
+        <option>UI/UX Designer</option>
+        <option>Business Analyst</option>
+        <option>Government Job</option>
+        <option>Teacher / Professor</option>
+        <option>Entrepreneur</option>
+        <option>Other</option>
+    </select>
+
+    <label>Preferred Job Type</label>
+    <select id="jobType">
+        <option value="">Select Job Type</option>
+        <option>Private Job</option>
+        <option>Government Job</option>
+        <option>Freelancing</option>
+        <option>Business</option>
+        <option>Higher Education</option>
+    </select>
+
+    <label>Future Goal</label>
+    <textarea id="goal" placeholder="Describe your future goal"></textarea>
+
+    <label>Preferred Work Location</label>
+    <select id="location">
+        <option value="">Select Location</option>
+        <option>India</option>
+        <option>Maharashtra</option>
+        <option>Other State</option>
+        <option>Abroad</option>
+        <option>Work From Home</option>
+    </select>
+
+    <div class="buttons">
+        <button class="secondary" onclick="nextPage(4)">Previous</button>
+        <button onclick="saveCareer()">Next</button>
+    </div>
+
+</section>
+
+
+<!-- PAGE 6 FINAL REVIEW -->
+
+<section class="page" id="page6">
+
+    <h2>Final Registration Review</h2>
+    <p class="subtitle">Step 5 - Check Your Information</p>
+
+    <div id="reviewData"></div>
+
+    <div class="buttons">
+        <button class="secondary" onclick="nextPage(5)">Previous</button>
+        <button onclick="finishRegistration()">Submit Registration</button>
+    </div>
+
+</section>
+
+
+<!-- PAGE 7 THANK YOU + CAREER INFORMATION -->
+
+<section class="page thankyou" id="page7">
+
+    <div class="checkmark">✓</div>
+
+    <h1>Thank You!</h1>
+    <h2>Registration Completed Successfully!</h2>
+
+    <p id="thankName"></p>
+
+    <div class="career-result">
+
+        <h2>Your Selected Career</h2>
+        <h3 id="careerTitle"></h3>
+
+        <h3>Career Description</h3>
+        <p id="careerDescription"></p>
+
+        <h3>Required Skills</h3>
+        <p id="careerSkills"></p>
+
+        <h3>Educational Qualification</h3>
+        <p id="careerEducation"></p>
+
+        <h3>Career Opportunities</h3>
+        <p id="careerJobs"></p>
+
+        <h3>Average Salary (India)</h3>
+        <p id="careerSalary"></p>
+
+        <h3>Career Advice</h3>
+        <p id="careerAdvice"></p>
+
+    </div>
+
+    <button onclick="restart()">Back to Home</button>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Student Career Orientation | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
